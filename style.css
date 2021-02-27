@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    font-family: 'DotGothic16', sans-serif;
+}
+.maincontainer {
+    background-image: url(bg.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    
+}
+.mario {
+    background-image: url(mario.png);
+    width: 8vw;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+}
+.dragon{
+    background-image: url(dragon.png);
+    width: 8vw;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    
+}
+.dragonmove {
+    animation: dragonmove 5s linear infinite;
+}
+.jump {
+    animation: mario 0.5s linear;
+}
+@keyframes mario {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 40%;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes dragonmove {
+    0%{
+        left:100vw;
+    }
+    
+    100%{
+        left: -10vw;
+    }
+}
+.score {
+    width: 10vw;
+    background-color:transparent;
+    /* border: 1px solids black; */
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    font-size: larger;
+    font-weight: bolder;
+
+}
+.gameover {
+    /* border: 1px solid black; */
+    position: absolute;
+    left: 31%;
+    top: 3%;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: bolder;
+}
+.hide {
+    visibility: hidden;
+}
+.enter {
+    padding-top: 20%;
+}
+.startScreen {
+    position: absolute;
+    left: 31%;
+    top: 30%;
+    letter-spacing: 5px;
+}
